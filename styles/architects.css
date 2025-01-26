@@ -1,7 +1,254 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-.work-sans-font {
-    font-family: "Work Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Work Sans";
+}
+/* Shared styles */
+.flex {
+  display: flex;
+}
+.text-gray {
+  color: #424242;
+}
+.text-light-gray {
+  color: #727272;
+}
+.text-primary {
+  color: #ff900e;
+}
+.bg-light {
+  background-color: rgba(255, 144, 14, 0.1);
+}
+.btn-primary {
+  background-color: #ff900e;
+  color: white;
+  padding: 20px 25px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+}
+main {
+  max-width: 1440px;
+  margin: 0px auto;
+}
+main > section {
+  margin-top: 130px;
+}
+/* Header styles */
+/* Navbar styles */
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.nav-link {
+  text-decoration: none;
+}
+.nav-item {
+  list-style: none;
+  margin-right: 30px;
+}
+.navbar,
+.banner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+/* Banner style */
+.banner-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.banner-title {
+  font-weight: 700;
+  font-size: 4rem;
+}
+.banner-img {
+  width: 100%;
+}
+/* Team and feature section style */
+.teams {
+  align-items: center;
+}
+.team-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.our-features {
+  margin-left: 130px;
+  max-width: 630px;
+}
+.section-title {
+  font-size: 2.8rem;
+}
+.quick-list {
+  font-weight: 500;
+}
+.feature-description {
+  text-align: justify;
+  margin-bottom: 50px;
+}
+#feature-section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 20px;
+}
+.feature-card,
+.feature-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.feature-card {
+  padding: 30px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.featured-architect img {
+  max-width: 100%;
+}
+.features {
+  gap: 146px;
+}
+.btn-position {
+  margin-left: -100px;
+  margin-top: -100px;
+}
+.btn {
+  width: 342px;
+  height: 200px;
+  border-radius: 8px;
+  background: #ff900e;
+  padding: 45px 42px;
+}
+#experience-badge {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+/* Facts Style */
+.fact-card {
+  border: 1px solid #ff900e;
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.fact-number {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.fact-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.fact-description {
+  max-width: 1440px;
+  margin-bottom: 40px;
+}
+/* Sponsor related style */
+
+.sponsor-info {
+  max-width: 1440px;
+  margin: 50 auto;
+  text-align: center;
+}
+.sponsor-companies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 60px;
+}
+.sponsor-companies img {
+  filter: grayscale(100%);
+}
+.sponsor-companies {
+  justify-items: center;
+  gap: 50px;
+}
+/* Footer */
+footer {
+  border-radius: 8px;
+  background: #fff4e7;
+  width: 1440px;
+  height: 100px;
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+/* Responsive media query */
+/* Small device */
+@media screen and (max-width: 576px) {
+  .navbar,
+  .nav-links,
+  .teams,
+  .features {
+    flex-direction: column;
   }
+  .btn-position {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .team-img-container,
+  .facts-container,
+  .sponsor-companies {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .our-features {
+    margin-left: 20px;
+  }
+  .facts-container,
+  .sponsor-companies {
+    justify-content: center;
+    gap: 24px;
+  }
+  footer {
+    width: 100%;
+  }
+}
+
+/* Medium device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams,
+  .features {
+    flex-direction: column;
+  }
+  .our-features {
+    margin: 50px auto;
+  }
+  .sponsor-companies,
+  .facts-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-items: center;
+  }
+  .btn-position {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  footer {
+    width: 100%;
+  }
+}
